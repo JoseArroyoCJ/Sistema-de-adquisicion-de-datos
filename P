@@ -77,3 +77,15 @@ Con estos valores ya se logra eliminar el polo negativo de la señal de manera q
 Las evidencias, esquemas o codigos se visualizan a continuacion en el link :
 
 https://drive.google.com/drive/folders/1PXNvfhmbhqwHVhRbFEhqAu9eEh5_58Ut?usp=sharing
+
+Ademas de esto se recopilo material audiovisual que muestra las conexiones del circuito esquematico y de las conexiones del ardui-
+no, encontrado en Youtube mediante el siguiente link:
+
+https://youtu.be/_uqA4Fop_qQ?si=t-w_87oFbtqtWCoi
+
+Y por ultimo se añadio un video que mustra la onda en el serial plotter de arduino, el acceso a este video se realiza mediante el 
+siguiente link:
+
+https://youtu.be/kgOnOuD6NiI?si=OV-TLTqDZBLvXY2w
+
+Gracias por acceder al repositorio.
