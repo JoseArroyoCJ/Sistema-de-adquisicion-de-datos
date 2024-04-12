@@ -18,6 +18,6 @@ Vb= VCC*R2 / R1 +R2
 
 Para este caso se asigno un valor nominal de R1 y R2 de 2,2k 
 
-Al colocar Re y Rc se debe garantizar un corriente de colector de saturacion, con esta corriente se puede definir un punto de opera-
-ción de Ic sat/ 2 . Para lograr esto se partió de la formula Ic sat = VCC / Re + Rc, se busca una corriente de saturacion elevada
+Al colocar Re y Rc se debe garantizar un corriente de colector de saturacion, con esta corriente se puede definir un punto de ope-
+ración de Ic sat/ 2 . Para lograr esto se partió de la formula Ic sat = VCC / Re + Rc, se busca una corriente de saturacion elevada
 pero que no sacrifique el valor nominal de las resistencias, por lo que se decidio usar un corriente de saturacion de 25 mA
