@@ -1,12 +1,19 @@
 En este repositorio se encontrara las primeras etapas de un sistema de adquisición de datos de la corriente elctrica de la red de
 un hogar comun, focalizado en colombia,especificamente en la regios costera de Sincelejo-Sucre. Como primera etapa se realizo la 
 adicion de un nivel de DC a la señal sinuosidal del hogar, a la cual se le redujo su amlpitud mediante el uso de un reostato de
-1 mega-Ohm, luego de esto se hizo un circuito de un BJT polarizado mediante divisor de voltaje, para esto de añadieron resistencias y 
-un condensador los cuales fueron calculados segun el siguiente diseño.
+1 mega-Ohm, luego de esto se hizo un circuito de un BJT polarizado mediante divisor de voltaje, para esto de añadieron resistenci-
+as y un condensador los cuales fueron calculados segun el siguiente diseño.
 
 Rc = Resistencia de capacitor
 Re = Resistencia de emisor
 R1 = Resistecia concetada a base y colector 
 R2 = Resistencia concetada a base y tierra
 
-Para calcular Rc y Re se 
+Para calcular Rc y Re se partio de la premisa que el voltaje de colector es equivalente a 5v, este valor se eligio con el 
+objetivo de colocar R1 y R2 iguales, ya que est garantiza que el divisor de voltaje tenga una tension en base de 2,5V, con este 
+nivel de offset se logra eliminar el polo negativo de la señal, pero aun debe garantizarse la eleccion correcta de Re y Rc.
+
+Vb= VCC*R2 / R1 +R2
+2.5V= 5v*2,2K / 2,2K + 2,2K
+
+
