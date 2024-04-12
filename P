@@ -19,5 +19,57 @@ Vb= VCC*R2 / R1 +R2
 Para este caso se asigno un valor nominal de R1 y R2 de 2,2k 
 
 Al colocar Re y Rc se debe garantizar un corriente de colector de saturacion, con esta corriente se puede definir un punto de ope-
-ración de Ic sat/ 2 . Para lograr esto se partió de la formula Ic sat = VCC / Re + Rc, se busca una corriente de saturacion elevada
-pero que no sacrifique el valor nominal de las resistencias, por lo que se decidio usar un corriente de saturacion de 25 mA
+ración de Ic sat/ 2 . Para lograr esto se partió de la formula Ic sat = VCC / Re + Rc, se busca una corriente de saturacion eleva-
+da pero que no sacrifique el valor nominal de las resistencias, por lo que se decidio usar un corriente de saturacion de 25 mA,por
+lo que:
+
+Ic sat = VCC / Re + Rc
+Re + Rc = VCC / Ic sat
+Re + Rc = 5V  / 25mA
+En este repositorio se encontrara las primeras etapas de un sistema de adquisición de datos de la corriente elctrica de la red de
+un hogar comun, focalizado en colombia,especificamente en la regios costera de Sincelejo-Sucre. Como primera etapa se realizo la 
+adicion de un nivel de DC a la señal sinuosidal del hogar, a la cual se le redujo su amlpitud mediante el uso de un reostato de
+1 mega-Ohm, luego de esto se hizo un circuito de un BJT polarizado mediante divisor de voltaje, para esto de añadieron resistenci-
+as y un condensador los cuales fueron calculados segun el siguiente diseño.
+
+Rc = Resistencia de capacitor
+Re = Resistencia de emisor
+R1 = Resistecia concetada a base y colector 
+R2 = Resistencia concetada a base y tierra
+K = Kilo ohm
+R1 || R2 = Paralelo de R1 y R2
+Xc = Reactancia capacitiva
+
+Para calcular Rc y Re se partio de la premisa que el voltaje de colector es equivalente a 5v, este valor se eligio con el 
+objetivo de colocar R1 y R2 iguales, ya que est garantiza que el divisor de voltaje tenga una tension en base de 2,5V, con este 
+nivel de offset se logra eliminar el polo negativo de la señal, pero aun debe garantizarse la eleccion correcta de Re y Rc.
+
+Vb= VCC*R2 / R1 +R2
+2.5V= 5v*2,2K / 2,2K + 2,2K
+
+Para este caso se asigno un valor nominal de R1 y R2 de 2,2k 
+
+Al colocar Re y Rc se debe garantizar un corriente de colector de saturacion, con esta corriente se puede definir un punto de ope-
+ración de Ic sat/ 2 . Para lograr esto se partió de la formula Ic sat = VCC / Re + Rc, se busca una corriente de saturacion eleva-
+da pero que no sacrifique el valor nominal de las resistencias, por lo que se decidio usar un corriente de saturacion de 25 mA,por
+lo que:
+
+Ic sat = VCC / Re + Rc
+Re + Rc = 5V / 25mA
+Re + Rc = 200 ohm
+
+Para evitar una gran amplificacion de la señal se decidio que Re sea un poco mayor que Rc, debido a esto:
+Re = 110 ohm
+Rc = 90 ohm 
+
+Para el capacitor de acople se necesito calcular la impedancia capactiva, la cual se calculó con la formula:
+Xc = (R1 || R2)(0,1) 
+Debido a que R1 = R2, su paralelo corresponde a R1/2 ó R2/2 , dando como resultado 1,1k que al multiplicarse por el 10% se obtuvo:
+Xc = 110 
+
+con la reactancia capacitiva se logro hallar la capacitancia necesaria para el condensador de acople, usando la siguiente
+expresión:
+
+C = 1 / 2 * π * f * Xc
+C = 1 / 2 * π * 60 * 110 ≅ 25 uF
+
