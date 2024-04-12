@@ -73,4 +73,7 @@ expresión:
 C = 1 / 2 * π * f * Xc
 C = 1 / 2 * π * 60 * 110 ≅ 25 uF
 
-Con estos valores ya se logra eliminar el polo negativo de la señal de manera que la señal se traslada el eje positivo del plano, 
+Con estos valores ya se logra eliminar el polo negativo de la señal de manera que la señal se traslada el eje positivo del plano.
+Las evidencias, esquemas o codigos se visualizan a continuacion en el link :
+
+https://drive.google.com/drive/folders/1PXNvfhmbhqwHVhRbFEhqAu9eEh5_58Ut?usp=sharing
